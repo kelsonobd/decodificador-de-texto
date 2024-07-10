@@ -17,9 +17,15 @@ function descriptografar(text) {
 }
 
 function hideImageAndText() {
-    document.querySelector('.imagem1').classList.add('hidden');
-    document.querySelector('.form2 h4').classList.add('hidden');
-    document.querySelector('.areaText2').classList.add('expanded');
+    const areaText2 = document.querySelector('.areaText2');
+    const form2H4 = document.querySelector('.form2 h4');
+    const imagem1 = document.querySelector('.imagem1');
+
+    if (areaText2.value.trim() !== '') {
+        imagem1.classList.add('hidden');
+        form2H4.classList.add('hidden');
+        areaText2.classList.add('expanded');
+    }
 }
 
 document.getElementById('botao1').addEventListener('click', function(event) {
@@ -37,7 +43,7 @@ document.getElementById('botao1').addEventListener('click', function(event) {
     // Limpa a área de entrada
     document.getElementById('input1').value = '';
 
-    // Esconde a imagem e o texto do form2 e expande a área de texto
+    // Esconde a imagem e o texto do form2 se a área de texto não estiver vazia
     hideImageAndText();
 });
 
@@ -56,6 +62,11 @@ document.querySelector('.botao2').addEventListener('click', function(event) {
     // Limpa a área de saída
     document.querySelector('.areaText2').value = '';
 
-    // Esconde a imagem e o texto do form2 e expande a área de texto
+    // Esconde a imagem e o texto do form2 se a área de texto não estiver vazia
+    hideImageAndText();
+});
+
+// Event listener para verificar mudanças na área de texto
+document.querySelector('.areaText2').addEventListener('input', function() {
     hideImageAndText();
 });
