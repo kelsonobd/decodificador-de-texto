@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #f3f4fd;
+}
+
+.logo{
+    width: 120px;
+    height: 48px;
+    padding: 5% 0% 0% 3%;
+}
+
+.container {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+    
+}
+
+.conteudoPrincipal {
+    /* Primeira secton, com area de texto e botoes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 944px;
+    width: 100%;
+    background-color:#f3f4fd;;
+
+}
+
+.areaInput {
+    /* Div com os form e o text area */
+    display:flex;
+    justify-content: center;
+    
+}
+
+.areaText1 {
+    /* estilizacao do textarea */
+    width: 680px;
+    height: 48px;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    Overflow-wrap: break-word; 
+    resize: none; 
+    background-color: #f3f4fd;;
+    border: none;
+}
+.areaText1::placeholder {
+    color: #0A3871;
+}
+.areaText1:focus {
+    border-color: #0A3871; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+  }
+
+/* Estilização dos butões */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.botao1,
+.botao2 {
+    width: 328px;
+    height: 67px;
+    border-radius: 40px;
+    border: solid 1px;
+}
+
+.botao1 {
+    color: #ffff;
+    background: #0A3871;
+    ;
+}
+
+.botao2 {
+    color: #0A3871;
+    background: #D8DFE8;
+}
+
+/* Inicio side B */
+
+.container2 {
+    /* Inicio da section 2 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffff;
+    width: 400px;
+    height: 944px;
+    border-radius: 32px;
+}
+
+.imagem1 {
+    width: 336px;
+    height: 304px;
+}
+
+.form2 {
+    /* form da segunda section */
+    width: 336px;
+    height: 58px;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+
+}
+
+.areaText2 {
+    /* estiliazacao do textarea 2 */
+    width: 336px;
+    height: 122px;
+    border: none;
+    text-align: center;
+    padding-top: 10%;
+    Overflow-wrap: break-word;
+    resize: none;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0A3871;
+}
+
+.areaText2::placeholder {
+    color: #0A3871;
+}
+.areaText2:focus {
+    border-color: #0A3871; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+  }
