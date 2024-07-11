@@ -146,7 +146,7 @@ body {
     /* Inicio da section 2 */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
     width: auto;
@@ -160,6 +160,7 @@ body {
 
 
 .imagem1 {
+    margin-top: 60%;
     width: 336px;
     height: 304px;
 }
@@ -176,6 +177,10 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+h4{
+    font-size: 20px;
+    color: #0A3871;
+}
 
 .areaText2 {
     /* estilização do textarea 2 */
