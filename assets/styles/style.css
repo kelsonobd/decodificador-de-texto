@@ -145,7 +145,7 @@ body {
     /* Inicio da section 2 */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #ffffff;
     width: auto;
@@ -168,19 +168,11 @@ body {
     /* form da segunda section */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     width: 336px;
     height: 70%;
     text-align: center;
     border: none;
     background-color: rgb(255, 255, 255);
-}
-
-
-
-h4 {
-    font-size: 24px;
-    color: #0A3871;
 }
 
 
@@ -296,9 +288,7 @@ h4 {
     display: none;
     
 }
-h4{
-    display: none;
-}
+
 .areaText2{
     padding-top: ;
     overflow: hidden;
