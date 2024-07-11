@@ -295,9 +295,13 @@ h4{
     
 }
 
-.areaText2{
-    padding-top: ;
+.areaText2{  
     overflow: hidden;
+}
+
+.botao3{
+    width: 200px;
+
 }
 
 .rodape{
