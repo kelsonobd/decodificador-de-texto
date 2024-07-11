@@ -284,9 +284,11 @@ h4{
 .areaText1{
     height: 70%;
     width:100%;
-  
-
 }
+.pInfo{
+    font-size: 8px ;
+}
+
 
 .container2{
     height: 176px;
