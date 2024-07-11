@@ -62,11 +62,12 @@ body {
     resize: none;
     background-color: #f3f4fd;
     border: none;
+    color:#0A3871;
 }
 
 
 .areaText1::placeholder {
-    color: #0A3871;
+    color: #949494;
 }
 
 
