@@ -81,12 +81,11 @@ body {
 
 
 .info {
-    margin-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 252px;
+    width: 50%;
     margin-bottom: 10px;
     
 }
