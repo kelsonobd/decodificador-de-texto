@@ -271,7 +271,11 @@ h4 {
 @media (max-width: 600px){
 .container{
     flex-direction: column;
-    background-color: aqua;
+    background-color: #f3f4fd;
+}
+
+.areaInput{
+    padding-left: 7%;
 }
 .logo{
     height: 30px;
@@ -279,6 +283,7 @@ h4 {
 }
 .areaText1{
     width: auto;
+
 }
 
 .container2{
@@ -292,7 +297,7 @@ h4{
     display: none;
 }
 .areaText2{
-    padding-top: 20%;
+    padding-top: ;
 }
 
 .textRodape{
