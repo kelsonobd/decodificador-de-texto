@@ -1,146 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-
 * {
-margin: 0;
-padding: 0;
-font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
-
 
 body {
-box-sizing: border-box;
-background-color: #f3f4fd;
+    background-color: #f3f4fd;
 }
-
 
 .logo {
-width: 120px;
-height: 48px;
-padding: 5% 0% 0% 3%;
+    width: 120px;
+    height: 48px;
+    padding: 5% 0% 0% 3%;
 }
-
 
 .container {
-padding: 5% 15%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 82px;
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
-
 
 .conteudoPrincipal {
-/* Primeira section, com area de texto e botoes */
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-height: 944px;
-width: 100%;
-background-color: #f3f4fd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 944px;
+    background-color: #f3f4fd;
 }
-
 
 .areaInput {
-/* Div com os form e o text area */
-display: flex;
-justify-content: center;
-background-color: #f3f4fd;
-height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f3f4fd;
 }
-
 
 .areaText1 {
-/* estilização do textarea */
-width: 680px;
-height: 100%;
-font-family: 'Inter', sans-serif;
-font-weight: 400;
-font-size: 32px;
-line-height: 48px;
-overflow-wrap: break-word;
-resize: none;
-background-color: #f3f4fd;
-border: none;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    resize: none;
+    background-color: #f3f4fd;
+    border: none;
 }
-
 
 .areaText1::placeholder {
-color: #0A3871;
+    color: #0A3871;
 }
-
 
 .areaText1:focus {
-border-color: #0A3871;
-/* Cor da borda ao focar */
-outline: none;
-/* Remove o contorno padrão do navegador */
+    border-color: #0A3871;
+    outline: none;
 }
-
-
 
 .info {
-
-
-margin-left: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 10px;
-width: 252px;
-margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }
-
 
 .imgInfor {
-width: 16px;
-height: 16px;
+    width: 1rem;
+    height: 1rem;
 }
-
 
 .pInfo {
-font-weight: 400;
-font-size: 12px;
-color: #495057;
-line-height: 18px;
-white-space: nowrap;
+    font-size: 0.75rem;
+    color: #495057;
+    line-height: 1.5;
+    white-space: nowrap;
 }
 
-
-/* Estilização dos botões */
 .buttons {
-display: flex;
-justify-content: center;
-gap: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
-
 
 .botao1,
 .botao2 {
-width: 328px;
-height: 67px;
-border-radius: 40px;
-border: solid 1px;
-cursor: pointer;
+    width: 20rem;
+    height: 8rem;
+    border-radius: 4rem;
+    border: solid 1px;
+    cursor: pointer;
 }
-
 
 .botao1 {
-color: #ffff;
-background: #0A3871;
+    color: #ffff;
+    background: #0A3871;
 }
-
 
 .botao2 {
-color: #0A3871;
-background: #D8DFE8;
+    color: #0A3871;
+    background: #D8DFE8;
 }
-
-
-/* Inicio side B */
-
-
-
 
 .container2 {
     display: flex;
@@ -149,121 +111,104 @@ background: #D8DFE8;
     align-items: center;
     background-color: #ffffff;
     width: 100%;
-    max-width: 700px; /* Adicione um limite máximo se necessário */
-    height: 944px;
-    border-radius: 32px;
+    max-width: 70rem;
+    height: 50rem;
+    border-radius: 2rem;
     overflow: hidden;
-    padding: 0% 5%;
     transition: all 0.3s ease-in-out;
+    padding: 0% 5%;
 }
-
 
 .imagem1 {
-width: 336px;
-height: 304px;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
 }
-
 
 .form2 {
-/* form da segunda section */
-width: 336px;
-height: 70%;
-text-align: center;
-border: none;
-background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    border: none;
+    background-color: rgb(255, 255, 255);
 }
-
 
 h4 {
-font-size: 24px;
-color: #0A3871;
+    font-size: 2rem;
+    color: #0A3871;
 }
-
 
 .areaText2 {
-/* estilização do textarea 2 */
-width: 336px;
-height: 10%;
-border: none;
-text-align: center;
-padding-top: 10%;
-overflow-wrap: break-word;
-resize: none;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #0A3871;
-transition: all 0.3s ease-in-out;
-background-color: #ffffff;
+    width: 100%;
+    height: 10%;
+    border: none;
+    text-align: center;
+    padding-top: 10%;
+    overflow-wrap: break-word;
+    resize: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #0A3871;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
 }
-
 
 .areaText2::placeholder {
-color: #0A3871;
+    color: #0A3871;
 }
-
 
 .areaText2:focus {
-border-color: #0A3871;
-/* Cor da borda ao focar */
-outline: none;
-/* Remove o contorno padrão do navegador */
+    border-color: #0A3871;
+    outline: none;
 }
-
 
 .botao3 {
-position: relative;
-top: 105px;
-width: 316px;
-height: 67px;
-border-radius: 40px;
-border: solid 1px #0A3871;
-cursor: pointer;
-color: #0A3871;
-background-color: #D8DFE8;
+    width: 100%;
+    max-width: 20rem;
+    height: 8rem;
+    border-radius: 4rem;
+    border: solid 1px #0A3871;
+    cursor: pointer;
+    color: #0A3871;
+    background-color: #D8DFE8;
+    margin-top: 2rem;
 }
-
-
 
 .rodape {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: #0A3871;
-height: auto;
-padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A3871;
+    padding: 1rem 0;
 }
-
 
 .sm {
-display: flex;
-gap: 10px;
+    display: flex;
+    gap: 1rem;
 }
 
-
-.smLink{
-width: 30px;
-height: px;
+.smLink {
+    width: 3rem;
+    height: 3rem;
 }
-
 
 .textRodape {
-margin-top: 10px;
-color: #ffffff
+    margin-top: 1rem;
+    color: #ffffff;
 }
 
-
-
-/* Classe para esconder a imagem */
 .hidden {
-display: none;
+    display: none;
 }
 
-
-
-/* Classe para expandir a área de texto */
 .expanded {
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        max-width: 100%;
+    }
 }
