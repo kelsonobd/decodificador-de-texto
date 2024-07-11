@@ -80,8 +80,6 @@ body {
 
 
 .info {
-    position: relative;
-    left: 80px;
     margin-left: 30px;
     display: flex;
     justify-content: center;
