@@ -130,7 +130,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    width: 500px;
+    width: 700px;
     height: 944px;
     border-radius: 32px;
     overflow: hidden;
@@ -195,6 +195,7 @@ h4 {
     border: solid 1px #0A3871;
     cursor: pointer;
     color: #0A3871;
+    background-color: #D8DFE8;
 }
 
 
