@@ -183,7 +183,7 @@ h4 {
 .areaText2 {
     /* estilização do textarea 2 */
     width: 336px;
-    height: 100%;
+    height: 70%;
     border: none;
     text-align: center;
     overflow-wrap: break-word;
