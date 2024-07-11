@@ -275,7 +275,8 @@ h4 {
 }
 
 .areaInput{
-    padding-left: 7%;
+    height: 100vh;
+    width: auto;
 }
 .logo{
     height: 30px;
