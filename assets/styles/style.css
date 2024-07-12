@@ -164,13 +164,13 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--cor-quartenaria);
-    width: auto;
+    width: 50%;
     height: 57rem;
     border-radius: 32px;
     overflow: hidden;
     /* Adicionado overflow: hidden */
     transition: all 0.3s ease-in-out;
-    padding: 1% 5%;
+   
 }
 
 
