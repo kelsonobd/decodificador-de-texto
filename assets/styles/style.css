@@ -1,16 +1,4 @@
-:root {
-    --cor-primaria: #caded3;
-    --cor-secundaria: #254336;
-    --cor-terciaria: #B7B597;
-    --cor-quartenaria: #f5f3ed;
-
-
-}
-
-
-
-
-* {
+{
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
@@ -20,15 +8,14 @@
 body {
     height: 100%;
     box-sizing: border-box;
-    background-color: var(--cor-primaria);
+    background-color: #f3f4fd;
 }
 
 
 .logo {
-    color: #254336;
-    font-size: 2.5rem;
-    padding: 3% 0% 0% 11%;
-   
+    width: 8%;
+    height: auto;
+    padding: 5% 0% 0% 3%;
 }
 
 
@@ -36,7 +23,7 @@ body {
     padding: 5% 10%;
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
     gap: 82px;
 }
 
@@ -48,7 +35,7 @@ body {
     justify-content: space-between;
     height: 57rem;
     width: 100%;
-
+    background-color: #f3f4fd;
 }
 
 
@@ -56,14 +43,14 @@ body {
     /* Div com os form e o text area */
     display: flex;
     justify-content: center;
+    background-color: #f3f4fd;
     height: 100%;
-
 }
 
 
 .areaText1 {
     /* estilização do textarea */
-    width: 900px;
+    width: 680px;
     height: 100%;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -71,16 +58,14 @@ body {
     line-height: 48px;
     overflow-wrap: break-word;
     resize: none;
-    background-color: var(--cor-primaria);
+    background-color: #f3f4fd;
     border: none;
-    border-radius: 10px;
-    color: var(--cor-secundaria);
-
+    color:#0A3871;
 }
 
 
 .areaText1::placeholder {
-    color: #928b8b;
+    color: #949494;
 }
 
 
@@ -92,18 +77,14 @@ body {
 }
 
 
-.infoButtons {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-left: 36px;
-}
 
 .info {
     display: flex;
     align-items: center;
     gap: 10px;
     width: 50%;
+    margin-left: 15%;
+    
 }
 
 
@@ -142,13 +123,13 @@ body {
 
 .botao1 {
     color: #ffff;
-    background: var(--cor-secundaria);
+    background: #0A3871;
 }
 
 
 .botao2 {
-    color: var(--cor-secundaria);
-    background: var(--cor-quartenaria);
+    color: #0A3871;
+    background: #D8DFE8;
 }
 
 
@@ -163,14 +144,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--cor-quartenaria);
-    width: 100%;
+    background-color: #ffffff;
+    width: auto;
     height: 57rem;
     border-radius: 32px;
     overflow: hidden;
     /* Adicionado overflow: hidden */
     transition: all 0.3s ease-in-out;
-   
+    padding: 1% 5%;
 }
 
 
@@ -189,10 +170,10 @@ body {
     height: 70%;
     text-align: center;
     border: none;
-    background-color: var(--cor-quartenaria);
+    background-color: rgb(255, 255, 255);
 }
 
-h4 {
+h4{
     font-size: 20px;
     color: #0A3871;
 }
@@ -209,19 +190,20 @@ h4 {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: var(--cor-secundaria);
+    color: #0A3871;
     transition: all 0.3s ease-in-out;
-    background-color: var(--cor-quartenaria);
+    background-color: #ffffff;
 }
 
 
 .areaText2::placeholder {
-    color: var(--cor-secundaria);
+    color: #949494;
 }
 
 
 .areaText2:focus {
-
+    border-color: #0A3871;
+    /* Cor da borda ao focar */
     outline: none;
     /* Remove o contorno padrão do navegador */
 }
@@ -231,10 +213,10 @@ h4 {
     width: 316px;
     height: 67px;
     border-radius: 40px;
-    border: solid 1px var(--cor-secundaria);
+    border: solid 1px #0A3871;
     cursor: pointer;
-    color: #ffffff;
-    background-color: var(--cor-secundaria);
+    color: #0A3871;
+    background-color: #D8DFE8;
 }
 
 
@@ -244,7 +226,7 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor-secundaria);
+    background-color: #0A3871;
     height: auto;
     padding: 10px 0px;
 }
@@ -282,180 +264,57 @@ h4 {
     height: 100%;
 }
 
-
-/* MEDIAS TABLETS E LEPTOPS */
-
-@media (max-width: 1024px) and (min-width: 601px) {
-
-    .logo {
-        height: 30px;
-        width: auto;
-    }
-
-    .container {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--cor-primaria);
-    }
-
-    .conteudoPrincipal {
-        height: 40rem;
-    }
-
-    .areaInput {
-        height: 100%;
-        width: 100%;
-    }
-
-    .form1 {
-        height: 100%;
-        width: 100%;
-    }
-
-    .areaText1 {
-        height: 80%;
-        width: 100%;
-    }
-
-    .infoButtons {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-    }
-
-    .info {
-        margin-right: 50%;
-
-    }
-
-
-    .pInfo {
-        font-size: 10px;
-    }
-
-    .buttons {
-        gap: 13%;
-        margin-right: 5%;
-    }
-
-    .container2 {
-        height: 22rem;
-        width: 98%;
-    }
-
-    .imagem1 {
-        display: none;
-
-    }
-
-    .areaText2 {
-        overflow: hidden;
-    }
-
-    .botao3 {
-        width: 200px;
-
-    }
-
-    .rodape {
-        width: auto;
-    }
-
-    .textRodape {
-        text-align: center;
-        font-size: 8px;
-    }
-
+@media (max-width: 600px){
+.container{
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f3f4fd;
+   
+}
+.conteudoPrincipal{
+    height: 20rem;
+}
+.areaInput{
+    width: auto;
+}
+.logo{
+    height: 30px;
+    width: auto;
+}
+.areaText1{
+    height: 70%;
+    width:100%;
+}
+.pInfo{
+    font-size: 10px ;
 }
 
 
-
-
-/* MEDIA CELULARES */
-
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--cor-primaria);
-
-    }
-
-    .conteudoPrincipal {
-        height: 22rem;
-    }
-
-    .areaInput {
-        width: auto;
-        height: 100%;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .areaText1 {
-        font-size: 1.5rem;
-        line-height: 24px;
-        height: 100%;
-        width: 34rem;
-        
-
-    }
-
-    .infoButtons {
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .pInfo {
-        font-size: 10px;
-    }
-
-    .buttons {
-        flex-direction: column;
-    }
-
-    .botao1,
-    .botao2 {
-        width: 200px;
-        height: 55px;
-    }
-
-    .container2 {
-        height: 11rem;
-        margin-left: 7%;
-    }
-
-    .imagem1 {
-        display: none;
-
-    }
-
-    .areaText2 {
-        overflow: hidden;
-
-    }
-
-
-
-    .botao3 {
-        width: 200px;
-
-    }
-
-    .rodape {
-        width: 100%;
-    }
-
-    .textRodape {
-        text-align: center;
-        font-size: 8px;
-    }
+.container2{
+    height: 176px;
 }
+.imagem1{
+    display: none;
+    
+}
+
+.areaText2{  
+    overflow: hidden;
+}
+
+.botao3{
+    width: 200px;
+
+}
+
+.rodape{
+    width: auto;
+}
+
+.textRodape{
+    text-align: center;
+    font-size: 8px;
+}
+}
+
+
