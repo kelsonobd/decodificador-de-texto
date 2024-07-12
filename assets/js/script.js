@@ -54,29 +54,23 @@ document.getElementById('botao1').addEventListener('click', function(event) {
     hideImageAndText();
 });
 
-document.querySelector('.botao2').addEventListener('click', function(event) {
+document.getElementById('botao2').addEventListener('click', function(event) {
     event.preventDefault(); // Previne o comportamento padrão do botão (enviar formulário)
 
-    // Obtém o texto criptografado da área de saída
-    const encryptedText = document.querySelector('.areaText2').value.toLowerCase();
+    // Obtém o texto da área de entrada
+    const inputText = document.getElementById('input1').value.toLowerCase();
 
     // Descriptografa o texto
-    const decryptedText = descriptografar(encryptedText);
+    const decryptedText = descriptografar(inputText);
 
-    // Mostra o texto descriptografado na área de entrada
-    document.getElementById('input1').value = decryptedText;
+    // Mostra o texto descriptografado na área de saída
+    document.querySelector('.areaText2').value = decryptedText;
 
-    // Limpa a área de saída
-    document.querySelector('.areaText2').value = '';
+    // Limpa a área de entrada
+    document.getElementById('input1').value = '';
 
     // Esconde a imagem e o texto do form2 se a área de texto não estiver vazia
     hideImageAndText();
-});
-
-// Event listener para verificar mudanças na área de texto
-document.querySelector('.areaText2').addEventListener('input', function() {
-    hideImageAndText();
-    this.value = this.value.toLowerCase();
 });
 
 // Função para copiar o texto da área de texto
@@ -88,6 +82,8 @@ function copiarTexto() {
     navigator.clipboard.writeText(areaText2.value)
         .then(() => {
             alert("Texto copiado para a área de transferência!");
+            areaText2.value = ''; // Limpa a área de saída após copiar
+            hideImageAndText(); // Atualiza a visibilidade da imagem e do botão de copiar
         })
         .catch(err => {
             console.error("Erro ao copiar o texto: ", err);
@@ -99,11 +95,7 @@ document.querySelector('.botao3').addEventListener('click', function() {
     copiarTexto();
 });
 
-// Adiciona event listeners para forçar letras minúsculas em input1 e areaText2
+// Adiciona event listeners para forçar letras minúsculas em input1
 document.getElementById('input1').addEventListener('input', function() {
-    this.value = this.value.toLowerCase();
-});
-
-document.querySelector('.areaText2').addEventListener('input', function() {
     this.value = this.value.toLowerCase();
 });
