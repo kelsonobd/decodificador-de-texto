@@ -1,320 +1,303 @@
-{
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+:root {
+  --cor-preta: #000;
+  --cor-verde: #43de0d;
+  --cor-verdeClaro: #d0ffd6;
 }
 
-
-body {
-    height: 100%;
-    box-sizing: border-box;
-    background-color: #f3f4fd;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Play", sans-serif;
 }
 
-
-.logo {
-    width: 8%;
-    height: auto;
-    padding: 5% 0% 0% 3%;
+/* Header */
+.head {
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background-color: #000;
+  color: var(--cor-verde);
 }
 
+/* logo da página */
+.head .logo {
+  padding-left: 6%;
+}
+
+/* Imagem do logo */
+.head .logo img {
+  width: 5.6rem;
+}
+
+/* área do titulo da pagina */
+.head .title {
+  width: 100%;
+  text-align: center;
+}
+
+/* Titulo da página */
+.head .title h1 {
+  font-size: 50px;
+}
+
+/* Fim header */
 
 .container {
-    padding: 5% 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 140px);
+  padding: 30px;
+  background-color: #000;
+}
+/* Área geral dos textos e botões */
+.container .text-areas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+/* Área do textos */
+.container .text-areas .text-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.container .text-areas .text-area form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-
-.conteudoPrincipal {
-    /* Primeira section, com area de texto e botoes */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 57rem;
-    width: 100%;
-    background-color: #f3f4fd;
+/* área do texto um e texto dois */
+.container .text-areas .text-area-one,
+.text-area-two {
+  background-color: var(--cor-verdeClaro);
+  border-radius: 20px;
+  height: 400px;
+  padding: 30px;
+  border: 3px solid var(--cor-verde);
+  font-size: 24px;
+  outline: none;
+  resize: none;
 }
 
-
-.areaInput {
-    /* Div com os form e o text area */
-    display: flex;
-    justify-content: center;
-    background-color: #f3f4fd;
-    height: 100%;
+/* Área do texto um */
+.container .text-areas .text-area-one {
+  width: 600px;
 }
 
-
-.areaText1 {
-    /* estilização do textarea */
-    width: 680px;
-    height: 100%;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 48px;
-    overflow-wrap: break-word;
-    resize: none;
-    background-color: #f3f4fd;
-    border: none;
-    color:#0A3871;
+/* Area do texto dois */
+.container .text-areas .text-area-two {
+  width: 500px;
+  background-image: url(../images/conversando.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-
-.areaText1::placeholder {
-    color: #949494;
+/* Botão de copiar */
+.buttons-two {
+  position: absolute;
+  top: 350px;
+  height: 50px;
+  width: 160px;
+}
+.container .buttons-two .btn-two {
+  cursor: pointer;
+  border: 2px solid var(--cor-verde);
+  font-size: 17px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--cor-verde);
+  color: var(--cor-preta);
 }
 
-
-.areaText1:focus {
-    border-color: #0A3871;
-    /* Cor da borda ao focar */
-    outline: none;
-    /* Remove o contorno padrão do navegador */
+/* Área dos botões */
+.container .buttons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 930px;
+  padding-right: 60px;
+  margin-top: 20px;
 }
 
-
-
-.info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 50%;
-    margin-left: 15%;
-    
+/* Botão um */
+.container .buttons .btn-one {
+  cursor: pointer;
+  border: 2px solid var(--cor-verde);
+  font-size: 17px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--cor-verde);
+  color: var(--cor-preta);
 }
 
-
-.imgInfor {
-    width: 16px;
-    height: 16px;
-}
-
-
-.pInfo {
-    font-weight: 400;
-    font-size: 12px;
-    color: #495057;
-    line-height: 18px;
-    white-space: nowrap;
-}
-
-
-/* Estilização dos botões */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-}
-
-
-.botao1,
-.botao2 {
-    width: 328px;
-    height: 67px;
-    border-radius: 40px;
-    border: solid 1px;
-    cursor: pointer;
-}
-
-
-.botao1 {
-    color: #ffff;
-    background: #0A3871;
-}
-
-
-.botao2 {
-    color: #0A3871;
-    background: #D8DFE8;
-}
-
-
-/* Inicio side B */
-
-
-
-
-.container2 {
-    /* Inicio da section 2 */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    width: auto;
-    height: 57rem;
-    border-radius: 32px;
-    overflow: hidden;
-    /* Adicionado overflow: hidden */
-    transition: all 0.3s ease-in-out;
-    padding: 1% 5%;
-}
-
-
-.imagem1 {
-    margin-top: 60%;
-    width: 336px;
-    height: 304px;
-}
-
-
-.form2 {
-    /* form da segunda section */
-    display: flex;
-    flex-direction: column;
-    width: 336px;
-    height: 70%;
-    text-align: center;
-    border: none;
-    background-color: rgb(255, 255, 255);
-}
-
-h4{
-    font-size: 20px;
-    color: #0A3871;
-}
-
-.areaText2 {
-    /* estilização do textarea 2 */
-    width: 336px;
-    height: 70%;
-    border: none;
-    text-align: center;
-    overflow-wrap: break-word;
-    overflow: hidden;
-    resize: none;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #0A3871;
-    transition: all 0.3s ease-in-out;
-    background-color: #ffffff;
-}
-
-
-.areaText2::placeholder {
-    color: #949494;
-}
-
-
-.areaText2:focus {
-    border-color: #0A3871;
-    /* Cor da borda ao focar */
-    outline: none;
-    /* Remove o contorno padrão do navegador */
-}
-
-
-.botao3 {
-    width: 316px;
-    height: 67px;
-    border-radius: 40px;
-    border: solid 1px #0A3871;
-    cursor: pointer;
-    color: #0A3871;
-    background-color: #D8DFE8;
-}
-
-
-
+/* rodapé */
 .rodape {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #0A3871;
-    height: auto;
-    padding: 10px 0px;
+  height: 40px;
+  background-color: var(--cor-verdeClaro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Responsividade celular */
+@media (min-width: 320px) and (max-width: 932px) {
+  /* Inicio Heade */
 
-.sm {
-    display: flex;
-    gap: 10px;
-}
+  .head .logo {
+    padding: 2%;
+  }
 
+  .head .logo img {
+    width: 40px;
+  }
 
-.smLink {
-    width: 30px;
-    height: px;
-}
+  .head .title h1 {
+    font-size: 25px;
+  }
+  /* Fim heade */
 
-
-.textRodape {
-    margin-top: 10px;
-    color: #ffffff
-}
-
-
-
-/* Classe para esconder a imagem */
-.hidden {
-    display: none;
-}
-
-
-
-/* Classe para expandir a área de texto */
-.expanded {
-    width: 100%;
+  /* Inicio main */
+  .container {
     height: 100%;
-}
-
-@media (max-width: 600px){
-.container{
+  }
+  /* Área geral do texto e dos botões */
+  .container .text-areas {
     flex-direction: column;
-    justify-content: space-between;
-    background-color: #f3f4fd;
-   
-}
-.conteudoPrincipal{
-    height: 20rem;
-}
-.areaInput{
-    width: auto;
-}
-.logo{
-    height: 30px;
-    width: auto;
-}
-.areaText1{
-    height: 70%;
-    width:100%;
-}
-.pInfo{
-    font-size: 10px ;
+    gap: 20px;
+    height: 100%;
+  }
+  /* Área dos textos */
+  .container .text-area {
+    position: relative;
+  }
+  /* Área texto 1 */
+  .container .text-areas .text-area-one {
+    height: 300px;
+    width: 350px;
+  }
+  /*  Área texto 2 */
+  .container .text-areas .text-area-two {
+    width: 350px;
+    height: 250px;
+  }
+  /*  Botão de copiar */
+  .container .buttons-two .btn-two {
+    position: absolute;
+    bottom: 155px;
+    width: 137px;
+    font-weight: 600;
+  }
+
+  /* Área dos botões */
+  .container .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    height: 80px;
+    padding: 40px;
+  }
+
+  /* Botões principais */
+  .container .buttons .btn-one {
+    border: 2px solid var(--cor-verde);
+    font-size: 15px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--cor-verde);
+    color: var(--cor-preta);
+    font-weight: 600;
+  }
+
+  /* rodapé */
+  .rodape {
+    height: 100px;
+    background-color: var(--cor-verdeClaro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
 }
 
+/* responsavidade de tablets */
 
-.container2{
-    height: 176px;
+@media (min-width: 600px) and (max-width: 1279px) {
+  .head {
+  }
+  .head .logo {
+    padding-left: 13px;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100%;
+    margin-top: -50px;
+  }
+  .container .text-areas {
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+  }
+  .container .text-area {
+    position: relative;
+  }
+  .container .text-areas .text-area-one {
+    height: 300px;
+    width: 650px;
+  }
+  .container .text-areas .text-area-two {
+    width: 650px;
+
+    height: 300px;
+  }
+
+  .container .buttons-two .btn-two {
+    position: absolute;
+    bottom: 110px;
+    width: 135px;
+    font-weight: 600;
+  }
+  .container .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    height: 80px;
+    padding: 40px;
+    margin-top: -50px;
+  }
+  .container .buttons .btn-one {
+    border: 2px solid var(--cor-verde);
+    font-size: 15px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--cor-verde);
+    color: var(--cor-preta);
+    font-weight: 600;
+  }
+
+  .rodape {
+    height: 60px;
+    background-color: var(--cor-verdeClaro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+  }
 }
-.imagem1{
-    display: none;
-    
-}
-
-.areaText2{  
-    overflow: hidden;
-}
-
-.botao3{
-    width: 200px;
-
-}
-
-.rodape{
-    width: auto;
-}
-
-.textRodape{
-    text-align: center;
-    font-size: 8px;
-}
-}
-
-

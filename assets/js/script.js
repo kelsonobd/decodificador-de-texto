@@ -1,109 +1,94 @@
 // Função para criptografar o texto
-function criptografar(text) {
-    return text.replace(/e/g, 'enter')
-               .replace(/i/g, 'imes')
-               .replace(/a/g, 'ai')
-               .replace(/o/g, 'ober')
-               .replace(/u/g, 'ufat');
+function criptografarTexto(texto) {
+    let textoCriptografado = texto
+        .replace(/e/g, 'enter')
+        .replace(/i/g, 'imes')
+        .replace(/a/g, 'ai')
+        .replace(/o/g, 'ober')
+        .replace(/u/g, 'ufat');
+    return textoCriptografado;
 }
 
 // Função para descriptografar o texto
-function descriptografar(text) {
-    return text.replace(/enter/g, 'e')
-               .replace(/imes/g, 'i')
-               .replace(/ai/g, 'a')
-               .replace(/ober/g, 'o')
-               .replace(/ufat/g, 'u');
+function descriptografarTexto(texto) {
+    let textoDescriptografado = texto
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ai/g, 'a')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
+    return textoDescriptografado;
 }
 
-function hideImageAndText() {
-    const areaText2 = document.querySelector('.areaText2');
-    const form2H4 = document.querySelector('.form2 h4');
-    const imagem1 = document.querySelector('.imagem1');
-    const botao3 = document.querySelector('.botao3');
-
-    if (areaText2.value.trim() !== '') {
-        imagem1.classList.add('hidden');
-        form2H4.classList.add('hidden');
-        areaText2.classList.add('expanded');
-        botao3.style.display = 'block';  // Mostrar o botão
+// Função para exibir ou ocultar o botão de copiar
+function toggleCopyButton() {
+    let copyButton = document.querySelector('.btn-two');
+    let textAreaTwoContent = document.querySelector('.text-area-two').value;
+    
+    if (textAreaTwoContent) {
+        copyButton.style.display = 'block'; // Mostra o botão
     } else {
-        imagem1.classList.remove('hidden');
-        form2H4.classList.remove('hidden');
-        areaText2.classList.remove('expanded');
-        botao3.style.display = 'none';  // Esconder o botão
+        copyButton.style.display = 'none'; // Oculta o botão
     }
 }
 
-document.getElementById('botao1').addEventListener('click', function(event) {
-    event.preventDefault(); // Previne o comportamento padrão do botão (enviar formulário)
-
-    // Obtém o texto da área de entrada
-    const inputText = document.getElementById('input1').value.toLowerCase();
-
-    // Criptografa o texto
-    const encryptedText = criptografar(inputText);
-
-    // Mostra o texto criptografado na área de saída
-    document.querySelector('.areaText2').value = encryptedText;
-
-    // Limpa a área de entrada
-    document.getElementById('input1').value = '';
-
-    // Esconde a imagem e o texto do form2 se a área de texto não estiver vazia
-    hideImageAndText();
-});
-
-document.querySelector('.botao2').addEventListener('click', function(event) {
-    event.preventDefault(); // Previne o comportamento padrão do botão (enviar formulário)
-
-    // Obtém o texto criptografado da área de saída
-    const encryptedText = document.querySelector('.areaText2').value.toLowerCase();
-
-    // Descriptografa o texto
-    const decryptedText = descriptografar(encryptedText);
-
-    // Mostra o texto descriptografado na área de entrada
-    document.getElementById('input1').value = decryptedText;
-
-    // Limpa a área de saída
-    document.querySelector('.areaText2').value = '';
-
-    // Esconde a imagem e o texto do form2 se a área de texto não estiver vazia
-    hideImageAndText();
-});
-
-// Event listener para verificar mudanças na área de texto
-document.querySelector('.areaText2').addEventListener('input', function() {
-    hideImageAndText();
-    this.value = this.value.toLowerCase();
-});
-
-// Função para copiar o texto da área de texto
+// Função para copiar o texto da text-area-two
 function copiarTexto() {
-    const areaText2 = document.querySelector('.areaText2');
-    areaText2.select();
-    areaText2.setSelectionRange(0, 99999); // Para dispositivos móveis
+    let textAreaTwo = document.querySelector('.text-area-two');
+    textAreaTwo.select();
+    document.execCommand('copy');
 
-    navigator.clipboard.writeText(areaText2.value)
-        .then(() => {
-            alert("Texto copiado para a área de transferência!");
-        })
-        .catch(err => {
-            console.error("Erro ao copiar o texto: ", err);
-        });
+    // Mostra a mensagem de confirmação
+    alert('Texto copiado com sucesso!');
+    
+    // Limpa o conteúdo da text-area-two após copiar
+    textAreaTwo.value = '';
+    toggleCopyButton(); // Oculta o botão novamente
 }
 
-// Adiciona o event listener ao botão de copiar
-document.querySelector('.botao3').addEventListener('click', function() {
-    copiarTexto();
+// Função para exibir alertas quando o input está vazio
+function verificarEntrada(texto, tipo) {
+    if (!texto) {
+        if (tipo === 'criptografar') {
+            alert('Digite um texto para criptografar');
+        } else if (tipo === 'descriptografar') {
+            alert('Digite um texto para descriptografar');
+        }
+        return false;
+    }
+    return true;
+}
+
+// Adicionando eventos aos botões
+document.getElementById('btn1').addEventListener('click', function() {
+    let textoEntrada = document.getElementById('input1').value;
+
+    // Verifica se há texto para criptografar
+    if (verificarEntrada(textoEntrada, 'criptografar')) {
+        let textoCriptografado = criptografarTexto(textoEntrada);
+        document.querySelector('.text-area-two').value = textoCriptografado;
+        document.getElementById('input1').value = ''; // Limpa a text-area-one
+        toggleCopyButton(); // Verifica se deve mostrar o botão de copiar
+    }
 });
 
-// Adiciona event listeners para forçar letras minúsculas em input1 e areaText2
-document.getElementById('input1').addEventListener('input', function() {
-    this.value = this.value.toLowerCase();
+document.getElementById('btn2').addEventListener('click', function() {
+    let textoEntrada = document.getElementById('input1').value;
+
+    // Verifica se há texto para descriptografar
+    if (verificarEntrada(textoEntrada, 'descriptografar')) {
+        let textoDescriptografado = descriptografarTexto(textoEntrada);
+        document.querySelector('.text-area-two').value = textoDescriptografado;
+        document.getElementById('input1').value = ''; // Limpa a text-area-one
+        toggleCopyButton(); // Verifica se deve mostrar o botão de copiar
+    }
 });
 
-document.querySelector('.areaText2').addEventListener('input', function() {
-    this.value = this.value.toLowerCase();
+document.querySelector('.btn-two').addEventListener('click', function() {
+    copiarTexto(); // Copia o texto da text-area-two e limpa a área de texto
+});
+
+// Ocultar o botão de copiar ao carregar a página
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.btn-two').style.display = 'none';
 });
